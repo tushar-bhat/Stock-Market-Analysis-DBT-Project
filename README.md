@@ -1,3 +1,25 @@
+# Introduction
+## Description
+6th semester Database Technologies (UE20CS343) Miniproject - Stock Market Analysis
+
+The project uses an API provided by https://site.financialmodelingprep.com/developer/docs to stream data to the program.
+
+It takes data of 5 different companies: Apple, Google, Microsoft, NVIDIA, Meta from the API every 2 minutes and stores it in a MySQL database. It uses a 6 minute window, i.e. it finds the min, max, avg of the data received every 6 minutes and stores it into a different table.
+
+This data is then displayed on a streamlit UI in the form of matplotlib graphs. 
+
+It supports batch processing and stream processing.
+* <b> Batch</b>: Takes all the data stored in the database and plots it, also displays min, max and avg.
+* <b>Stream</b>: Takes the latest data from the database and plots it onto a graph.
+
+It uses Kafka Streming, Spark Streaming, Zookeeper, MySQL and Streamlit.
+
+## Basic Program Flow
+
+![dbt_flow](https://user-images.githubusercontent.com/52106611/234940036-0af22331-98e1-4873-a20b-d92e6bbc9326.png)
+
+# Working and Execution
+
 ## Requirements
 ### The brackets show the versions used in this project.
 * Java (17.0.6)
@@ -61,11 +83,3 @@ The Window size can be changed by changing the value in line 33 and line 77 of s
 
 The entire setup will take about 6 GB of RAM.
 
-# Team
-PES2UG20CS370: Tenzin Tsephel
-
-PES2UG20CS371: Tushar Bhat
-
-PES2UG20CS389: Vishwa Mehul Mehta
-
-PES2UG20CS394: Voolla Sai Rethwik
